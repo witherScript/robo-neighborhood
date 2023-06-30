@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./js/scripts.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Mr. Roboher's Neighborhood</title>
   <link href="./css/styles.css" type="text/css" rel="stylesheet">
-  <title>Document</title>
 </head>
 
 <body>
   <div class="container" id="header">
     <h1>Mr. Roboger's Neighborhood!</h1>
     <h3>This Program will read a number and count to user's inputted number</h3>
-    <h3><strong>
+    <h6><strong>
         Note: We will use a fun substitution algorithm, which will
         count up to the user's inputted number, using the unique counting system
         of Mr. Roboger's Neighborhood!
-      </strong></h3>
+      </strong></h6>
   </div>
 
   <div class="container" id="input">
@@ -26,9 +28,14 @@
       <input type="number" id="user-number" name="user-number">
       <button type="submit">Submit Number</button>
     </form>
+    <button class="hidden" id="reset">Reset</button>
 
   </div>
-
+  <!--Display array-->
+  <div id="results" class="hidden container">
+    <h3>Results:</h3>
+    <p id="output"></p>
+  </div>
 </body>
 
 </html>
