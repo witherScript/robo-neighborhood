@@ -1,6 +1,6 @@
 # Mr. Roboger's Neighborhood - Set-up and README
 
-## Author: Genesis Scott
+### Author: Genesis Scott
 
 ## Technologies Used:
 - JavaScript
@@ -15,12 +15,18 @@
 ```bash
 $ mkdir project-name
 ```
-2. Clone the github repository:
 
+2. Change the current directory to /PATH/project-name
+
+```bash
+$ cd project-name
+```
+
+3. Clone the github repository:
 ```bash
 $ git clone https://github.com/witherScript/robo-neighborhood
 ```
-3. Open index.html in a web browser
+4. Open index.html in a web browser
 
 
 ## Tests
