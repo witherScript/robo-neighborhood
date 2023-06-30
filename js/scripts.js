@@ -6,6 +6,7 @@ function getArray(number) {
 
   const numArr = new Array(number + 1);
   for (let index = 0; index < numArr.length; index++) {
+    //if branching to check for 3, 2, 1 in that order of priority
     if (index.toString().includes('3')) {
       numArr[index] = "Won't you be my neighbor?";
     }
@@ -74,6 +75,8 @@ function handleSubmission(event) {
   resetButton.addEventListener('click', resetForm);
 }
 
+
+//make sure the window is loaded before we try to add event listeners
 window.addEventListener('load', handleUserInput);
 
 function handleUserInput() {
