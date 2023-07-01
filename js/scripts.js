@@ -141,6 +141,10 @@ function handleArrayGreaterThan1000(array) {
 
 }
 
+/*
+utility function to display the array in the DOM, notice error handling 
+for array length greater than 1000 on line 154
+*/
 function displayArray(array) {
 
   const divResults = document.getElementById('results');
