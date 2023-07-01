@@ -35,16 +35,48 @@ function unhideElement(element) {
   element.classList.remove('hidden');
 }
 
+/*
+utility function to display the array in a card element
+*/
+
+function toCardElement(element, index) {
+  const cardDiv = document.createElement('div');
+  cardDiv.classList.add('card', 'border-primary', 'mb-3');
+  cardDiv.style.maxWidth = '18rem';
+
+  const cardHeader = document.createElement('div');
+  cardHeader.classList.add('card-header');
+  cardHeader.textContent = 'Array value at location ' + index;
+
+  const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body', 'text-primary');
+
+  const cardTitle = document.createElement('h5');
+  cardTitle.classList.add('card-title');
+  cardTitle.textContent = 'Value: ' + element;
+
+  const cardText = document.createElement('p');
+  cardText.classList.add('card-text');
+  cardText.textContent = 'Index: ' + index + ', Value: ' + element;
+  cardText.id = 'elementNum-' + (index + 1).toString();
+
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardText);
+  cardDiv.appendChild(cardHeader);
+  cardDiv.appendChild(cardBody);
+
+  return cardDiv;
+
+
+}
+
 function displayArray(array) {
 
   const divResults = document.getElementById('results');
   divResults.innerHTML = '';
-  console.log(array);
   array.forEach((element, index) => {
-    const p = document.createElement('p');
-    p.textContent = 'Index: ' + index + ', Value: ' + element;
-    p.id = 'elementNum-' + (index + 1).toString();
-    divResults.appendChild(p);
+
+    divResults.appendChild(toCardElement(element, index));
 
   });
 
